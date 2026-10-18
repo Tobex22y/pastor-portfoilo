@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Tunde Adebayo | Author, Educator, Entrepreneur</title>
+<meta name="description" content="Qualifications, experience and book by Dr. Tunde Adebayo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="nav">
+  <a href="#top" class="brand">T. Adebayo</a>
+  <button class="burger" aria-label="Menu" aria-expanded="false">Menu</button>
+  <nav id="menu">
+    <a href="#about">About</a><a href="#qualifications">Qualifications</a><a href="#experience">Experience</a><a href="#book">Book</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div>
+    <h1>Dr. Tunde Adebayo</h1>
+    <p class="lead">Educator, business consultant and author. Twenty years of teaching, building companies and helping people turn plans into results.</p>
+    <p><a class="btn" href="#book">Buy my book</a> <a class="btn ghost" href="#contact">Get in touch</a></p>
+  </div>
+  <div class="portrait" role="img" aria-label="Portrait placeholder">TA</div>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <p>Replace this with a short biography: who you are, what you do, what drives you, and who you help. Two or three short paragraphs work best.</p>
+</section>
+
+<section id="qualifications">
+  <h2>Qualifications</h2>
+  <div class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-tab="edu">Education</button>
+    <button role="tab" aria-selected="false" data-tab="biz">Business</button>
+    <button role="tab" aria-selected="false" data-tab="work">Professional</button>
+  </div>
+  <div class="panel" id="edu">
+    <ul class="list">
+      <li><strong>Ph.D., Management</strong><span>University Name, 2015</span></li>
+      <li><strong>M.Sc., Business Administration</strong><span>University Name, 2010</span></li>
+      <li><strong>B.Sc., Economics</strong><span>University Name, 2005</span></li>
+    </ul>
+  </div>
+  <div class="panel" id="biz" hidden>
+    <ul class="list">
+      <li><strong>Certified Management Consultant</strong><span>Institute Name, 2016</span></li>
+      <li><strong>Founder, Company Name</strong><span>Est. 2012. Short description of the business.</span></li>
+      <li><strong>Project Management Professional (PMP)</strong><span>PMI, 2018</span></li>
+    </ul>
+  </div>
+  <div class="panel" id="work" hidden>
+    <ul class="list">
+      <li><strong>Member, Professional Body</strong><span>Membership number or grade</span></li>
+      <li><strong>Licensed Trainer</strong><span>Awarding body, 2014</span></li>
+      <li><strong>Award or recognition</strong><span>Organisation, 2020</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <ol class="timeline">
+    <li><time>2021 to now</time><h3>Managing Director, Company Name</h3><p>What you lead, your team size and a result you are proud of.</p></li>
+    <li><time>2015 to 2021</time><h3>Senior Lecturer, University Name</h3><p>Courses taught, students mentored, research published.</p></li>
+    <li><time>2010 to 2015</time><h3>Business Analyst, Organisation Name</h3><p>Your role and one measurable achievement.</p></li>
+  </ol>
+</section>
+
+<section id="book" class="book">
+  <div class="cover" role="img" aria-label="Book cover placeholder"><span>Your Book<br>Title Here</span><small>Tunde Adebayo</small></div>
+  <div>
+    <h2>Your Book Title Here</h2>
+    <p>Write a short description of the book: what it is about, who should read it and what they will gain from it.</p>
+    <p class="price">₦5,000 <span>paperback</span></p>
+    <button class="btn" id="buyBtn">Buy the book</button>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact and social media</h2>
+  <p>Email: <a href="mailto:you@example.com">you@example.com</a> · Phone: <a href="tel:+2348000000000">+234 800 000 0000</a></p>
+  <ul class="social">
+    <li><a href="https://facebook.com/yourpage" target="_blank" rel="noopener">Facebook</a></li>
+    <li><a href="https://twitter.com/yourhandle" target="_blank" rel="noopener">Twitter / X</a></li>
+    <li><a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">Instagram</a></li>
+    <li><a href="https://wa.me/2348000000000" target="_blank" rel="noopener">WhatsApp</a></li>
+    <li><a href="https://linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a></li>
+    <li><a href="https://youtube.com/@yourchannel" target="_blank" rel="noopener">YouTube</a></li>
+    <li><a href="https://tiktok.com/@yourhandle" target="_blank" rel="noopener">TikTok</a></li>
+  </ul>
+</section>
+</main>
+
+<footer>© <span id="yr"></span> Dr. Tunde Adebayo. All rights reserved.</footer>
+
+<dialog id="orderDlg">
+  <form id="orderForm" method="dialog">
+    <h3>Order the book</h3>
+    <label>Full name<input name="name" required autocomplete="name"></label>
+    <label>Email<input name="email" type="email" required autocomplete="email"></label>
+    <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+    <label>Delivery address<textarea name="address" rows="2" required></textarea></label>
+    <label>Copies<input name="qty" type="number" min="1" max="50" value="1" required></label>
+    <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <p id="orderMsg" role="status"></p>
+    <div class="row"><button type="button" class="btn ghost" id="closeDlg">Cancel</button><button class="btn" id="submitBtn" type="submit">Place order</button></div>
+  </form>
+</dialog>
+<script src="js/main.js"></script>
+</body>
+</html>
