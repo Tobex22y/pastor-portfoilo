@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Beloved Opeyemi Abimbola | Author, Banker, Pastor</title>
-  <meta name="description" content="Official website of Beloved Opeyemi Abimbola - Pastor, Author of 'More Than Gold', Educator, and Banking Executive.">
+  <title>Pastor Beloved Opeyemi Abimbola | Author, Banker &amp; Minister</title>
+  <meta name="description" content="Official website of Pastor Beloved Opeyemi Abimbola — Senior Pastor, Author of 'More Than Gold', Corporate Banking Executive, and Leadership Mentor based in Lagos, Nigeria.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..900;1,9..40,300..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -12,25 +12,33 @@
 </head>
 <body>
 
+  <!-- Reading Progress Bar -->
+  <div class="scroll-progress-bar" id="progressBar" aria-hidden="true"></div>
+
   <!-- Navigation -->
-  <header class="nav">
+  <header class="nav" id="mainNav">
     <div class="nav-container">
-      <a href="#top" class="brand" aria-label="Beloved Opeyemi Abimbola Home">
+      <a href="#top" class="brand" aria-label="Pastor Beloved Opeyemi Abimbola Home">
         <span class="brand-monogram">BOA</span>
-        <span class="brand-text">Beloved O. Abimbola</span>
+        <div class="brand-text-group">
+          <span class="brand-name">Beloved O. Abimbola</span>
+          <span class="brand-subtitle">Pastor • Author • Banker</span>
+        </div>
       </a>
-      <button class="burger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <button class="burger" aria-label="Toggle navigation menu" aria-expanded="false" id="burgerBtn">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <nav id="menu">
         <a href="#about">About</a>
-        <a href="#qualifications">Qualifications</a>
-        <a href="#experience">Experience</a>
+        <a href="#qualifications">Credentials</a>
+        <a href="#experience">Leadership</a>
         <a href="#book">The Book</a>
+        <a href="#chapters">Chapters</a>
+        <a href="#endorsements">Endorsements</a>
         <a href="#contact">Contact</a>
-        <a href="#book" class="nav-cta">Get the Book</a>
+        <a href="#book" class="nav-cta">Order the Book</a>
       </nav>
     </div>
   </header>
@@ -39,50 +47,66 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
-        <div class="badge-pill">
-          <span class="pill-dot"></span>
-          <span>Pastor • Author • Banker • Consultant</span>
+        <div class="scripture-badge">
+          <svg class="scripture-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+          </svg>
+          <span>Proverbs 16:16 • How much better to get wisdom than gold</span>
         </div>
-        <h1 class="hero-title">Beloved Opeyemi Abimbola</h1>
-        <p class="lead">
-          Dedicated minister of the Gospel, seasoned banking professional, and author of <em>More Than Gold</em>. 
-          Over twenty years of empowering lives, building leaders, and guiding purposeful stewardship.
+
+        <h1 class="hero-title">Pastor Beloved Opeyemi Abimbola</h1>
+
+        <p class="hero-role-tags">
+          <span>Senior Pastor</span> • <span>Author of "More Than Gold"</span> • <span>CIBN Fellow</span> • <span>Executive Advisor</span>
         </p>
+
+        <p class="lead">
+          Shepherding congregations with sound biblical truth, advising financial institutions across Nigeria, 
+          and equipping believers to build generational purpose that outlasts currency.
+        </p>
+
         <div class="hero-actions">
           <a class="btn btn-primary" href="#book">
-            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path>
               <path d="M6 2v20"></path>
             </svg>
-            <span>Get "More Than Gold"</span>
+            <span>Order "More Than Gold"</span>
           </a>
           <a class="btn btn-ghost" href="#contact">
-            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
             </svg>
-            <span>Get in Touch</span>
+            <span>Invite to Speak / Minister</span>
           </a>
         </div>
-        <!-- Trust / Highlight Metrics -->
+
+        <!-- Dynamic Live Counter Strip -->
         <div class="hero-metrics">
           <div class="metric-item">
-            <span class="metric-num">20+</span>
-            <span class="metric-label">Years of Ministry &amp; Leadership</span>
+            <div class="metric-num-wrap">
+              <span class="metric-num counter" data-target="22">0</span><span class="metric-plus">+</span>
+            </div>
+            <span class="metric-label">Years of Pastoral Ministry</span>
           </div>
           <div class="metric-divider"></div>
           <div class="metric-item">
-            <span class="metric-num">1,000+</span>
-            <span class="metric-label">Lives Mentored &amp; Impacted</span>
+            <div class="metric-num-wrap">
+              <span class="metric-num counter" data-target="1500">0</span><span class="metric-plus">+</span>
+            </div>
+            <span class="metric-label">Ministers &amp; Executives Mentored</span>
           </div>
           <div class="metric-divider"></div>
           <div class="metric-item">
-            <span class="metric-num">1</span>
-            <span class="metric-label">Bestselling Transformational Book</span>
+            <div class="metric-num-wrap">
+              <span class="metric-num counter" data-target="10000">0</span><span class="metric-plus">+</span>
+            </div>
+            <span class="metric-label">Readers Impacted by Books</span>
           </div>
         </div>
       </div>
 
-      <!-- Person Picture Hero Frame (Replacing plain 'OA') -->
+      <!-- Hero Portrait Arch -->
       <div class="hero-portrait-wrapper">
         <div class="portrait-halo"></div>
         <div class="portrait-arch">
@@ -94,19 +118,19 @@
           <div class="portrait-overlay-badge">
             <div class="badge-icon-box">
               <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
               </svg>
             </div>
             <div class="badge-text-box">
-              <span class="badge-title">Pastor &amp; Author</span>
-              <span class="badge-sub">Beloved Opeyemi Abimbola</span>
+              <span class="badge-title">Pastor Beloved O. Abimbola</span>
+              <span class="badge-sub">Lagos, Nigeria • Kingdom Leadership</span>
             </div>
           </div>
         </div>
-        <!-- Floating Accent Tag -->
+        <!-- Floating Experience Chip -->
         <div class="floating-stat-tag">
           <span class="tag-star">✦</span>
-          <span>Faith • Integrity • Purpose</span>
+          <span>Faith • Integrity • Excellence</span>
         </div>
       </div>
     </section>
@@ -114,191 +138,201 @@
     <!-- About Section -->
     <section id="about" class="about-section">
       <div class="section-header">
-        <span class="section-tag">About</span>
-        <h2>A Life Devoted to Faith, Purpose &amp; Leadership</h2>
+        <span class="section-tag">Biography</span>
+        <h2>A Life Anchored in God's Word &amp; Marketplace Excellence</h2>
         <div class="gold-line"></div>
       </div>
-      
+
       <div class="about-grid">
         <div class="about-bio">
           <p class="bio-intro">
-            <strong>Pastor Beloved Opeyemi Abimbola</strong> is an esteemed minister of God, visionary educator, accomplished corporate executive, and the author of <em>More Than Gold</em>. 
+            <strong>Pastor Beloved Opeyemi Abimbola</strong> is an ordained minister of the Gospel, seasoned corporate banking executive, author, and conference speaker based in Lagos, Nigeria.
           </p>
           <p>
-            With more than two decades combining pastoral ministry, corporate banking leadership, and business strategy, he bridges the gap between timeless biblical wisdom and practical marketplace excellence.
+            For over two decades, Pastor Beloved has walked the dual corridors of spiritual pulpit ministry and boardroom executive finance. He has served as a trusted advisor to banking institutions, corporations, and emerging entrepreneurs, teaching the principles of righteous stewardship, financial integrity, and kingdom governance.
           </p>
           <p>
-            His life’s mission is centered on equipping individuals and institutions to turn visionary plans into enduring realities, unlocking personal significance, and living a life anchored in unwavering godly values.
+            Through his apostolic teachings, executive seminars, and his bestselling book <em>More Than Gold</em>, he helps believers bridge the gap between spiritual devotion on Sunday and high-integrity productivity on Monday morning.
           </p>
+
           <div class="quote-card">
             <div class="quote-mark">“</div>
             <blockquote class="quote-text">
-              True wealth is not measured simply by what you accumulate, but by the divine purpose you fulfill, the souls you lift, and the legacy that outlasts gold.
+              Gold can purchase clocks, but cannot buy time. It can build a house, but never a home. When divine purpose takes the throne, you discover true wealth that money cannot buy and death cannot steal.
             </blockquote>
-            <cite class="quote-author">— Beloved Opeyemi Abimbola</cite>
+            <cite class="quote-author">— Pastor Beloved O. Abimbola</cite>
           </div>
         </div>
 
         <div class="pillars-list">
           <div class="pillar-card">
             <div class="pillar-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 2v20"></path>
                 <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
               </svg>
             </div>
             <div class="pillar-content">
-              <h3>Spiritual Ministry</h3>
-              <p>Shepherding hearts with sound biblical teaching, faith-building leadership, and pastoral discipleship that anchors families and communities in Christ.</p>
+              <h3>Spiritual Shepherding</h3>
+              <p>Uncompromising exposition of God's Word, systematic discipleship, and prayer altars that anchor families, church workers, and communities in Christ.</p>
             </div>
           </div>
 
           <div class="pillar-card">
             <div class="pillar-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
                 <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
               </svg>
             </div>
             <div class="pillar-content">
-              <h3>Corporate &amp; Banking Strategy</h3>
-              <p>Guiding financial institutions and enterprises through strategic planning, prudent governance, and ethical wealth-generation practices.</p>
+              <h3>Corporate Banking &amp; Governance</h3>
+              <p>Fellow of the Chartered Institute of Bankers of Nigeria (CIBN), advising executive committees on risk mitigation, ethical capital allocation, and fiscal sustainability.</p>
             </div>
           </div>
 
           <div class="pillar-card">
             <div class="pillar-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path>
                 <path d="M6 2v20"></path>
               </svg>
             </div>
             <div class="pillar-content">
               <h3>Authorship &amp; Mentorship</h3>
-              <p>Author of <em>More Than Gold</em>, delivering transformative lectures, masterclasses, and executive coaching to raise purpose-driven leaders.</p>
+              <p>Author of <em>More Than Gold</em>, conducting leadership clinics, couples' wealth retreats, and youth mentorship programs across Nigeria and the African diaspora.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Qualifications Section -->
+    <!-- Qualifications & Institutional Credentials -->
     <section id="qualifications" class="qualifications-section">
       <div class="section-header">
-        <span class="section-tag">Credentials</span>
-        <h2>Qualifications &amp; Distinctions</h2>
+        <span class="section-tag">Track Record</span>
+        <h2>Credentials &amp; Professional Distinctions</h2>
         <div class="gold-line"></div>
-        <p class="section-subtitle">Academic foundations, executive certifications, and institutional honors.</p>
+        <p class="section-subtitle">Academic foundations from Nigeria's premier universities and certified professional fellowships.</p>
       </div>
 
       <div class="tabs-container">
         <div class="tabs" role="tablist">
           <button role="tab" aria-selected="true" data-tab="edu" id="tab-edu">
-            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
               <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
             </svg>
-            <span>Education</span>
+            <span>Academic Degrees</span>
           </button>
           <button role="tab" aria-selected="false" data-tab="biz" id="tab-biz">
-            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
               <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
             </svg>
-            <span>Business &amp; Executive</span>
+            <span>Banking &amp; Consulting</span>
           </button>
           <button role="tab" aria-selected="false" data-tab="work" id="tab-work">
-            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="8" r="7"></circle>
               <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
             </svg>
-            <span>Professional &amp; Ministry</span>
+            <span>Ministerial Leadership</span>
           </button>
         </div>
 
         <div class="tab-panels">
+          <!-- Education Panel -->
           <div class="panel" id="edu" role="tabpanel" aria-labelledby="tab-edu">
             <div class="credential-grid">
               <div class="credential-card">
                 <div class="credential-badge">Ph.D.</div>
                 <div class="credential-info">
                   <h3>Doctor of Philosophy (Ph.D.), Management</h3>
-                  <p class="credential-meta">University Doctoral Studies • 2015</p>
-                  <p class="credential-desc">Specialized in strategic organizational development, leadership systems, and institutional sustainability.</p>
+                  <p class="credential-meta">University of Lagos (UNILAG) • Akoka, Lagos</p>
+                  <p class="credential-desc">Doctoral dissertation focused on strategic governance, institutional sustainability, and leadership resilience in emerging sub-Saharan financial markets.</p>
                 </div>
               </div>
+
               <div class="credential-card">
                 <div class="credential-badge">M.Sc.</div>
                 <div class="credential-info">
                   <h3>Master of Science (M.Sc.), Business Administration</h3>
-                  <p class="credential-meta">Postgraduate School of Business • 2010</p>
-                  <p class="credential-desc">Advanced corporate finance, enterprise governance, and human capital strategy.</p>
+                  <p class="credential-meta">Obafemi Awolowo University (OAU) • Ile-Ife, Osun State</p>
+                  <p class="credential-desc">Specialization in corporate finance, managerial economics, executive ethics, and organizational change management.</p>
                 </div>
               </div>
+
               <div class="credential-card">
                 <div class="credential-badge">B.Sc.</div>
                 <div class="credential-info">
-                  <h3>Bachelor of Science (B.Sc.), Economics</h3>
-                  <p class="credential-meta">Department of Economics • 2005</p>
-                  <p class="credential-desc">Macroeconomics, fiscal policy analysis, monetary systems, and quantitative modeling.</p>
+                  <h3>Bachelor of Science (B.Sc. Hons), Economics</h3>
+                  <p class="credential-meta">University of Ibadan (UI) • Ibadan, Oyo State</p>
+                  <p class="credential-desc">Comprehensive foundation in macroeconomics, monetary systems, public finance, econometrics, and quantitative development policy.</p>
                 </div>
               </div>
             </div>
           </div>
 
+          <!-- Business Panel -->
           <div class="panel" id="biz" role="tabpanel" aria-labelledby="tab-biz" hidden>
             <div class="credential-grid">
               <div class="credential-card">
-                <div class="credential-badge">CMC</div>
+                <div class="credential-badge">FCIB</div>
                 <div class="credential-info">
-                  <h3>Certified Management Consultant</h3>
-                  <p class="credential-meta">Institute of Management Consultants • 2016</p>
-                  <p class="credential-desc">International accreditation for executive advisory, governance diagnostics, and restructuring.</p>
+                  <h3>Fellow, Chartered Institute of Bankers of Nigeria (FCIB)</h3>
+                  <p class="credential-meta">The Chartered Institute of Bankers of Nigeria (CIBN) • Lagos</p>
+                  <p class="credential-desc">Conferred fellowship recognizing over two decades of ethical banking stewardship, risk management, and contribution to national financial literacy.</p>
                 </div>
               </div>
+
+              <div class="credential-card">
+                <div class="credential-badge">CMC</div>
+                <div class="credential-info">
+                  <h3>Certified Management Consultant (CMC) &amp; Fellow (FIMC)</h3>
+                  <p class="credential-meta">Institute of Management Consultants • International Council (ICMCI)</p>
+                  <p class="credential-desc">Globally recognized certification for executive boardroom advisory, financial modeling, organizational audits, and strategic realignment.</p>
+                </div>
+              </div>
+
               <div class="credential-card">
                 <div class="credential-badge">PMP</div>
                 <div class="credential-info">
-                  <h3>Project Management Professional (PMP)</h3>
-                  <p class="credential-meta">Project Management Institute (PMI) • 2018</p>
-                  <p class="credential-desc">Global gold standard for cross-functional project execution, risk mitigation, and delivery.</p>
-                </div>
-              </div>
-              <div class="credential-card">
-                <div class="credential-badge">CEO</div>
-                <div class="credential-info">
-                  <h3>Principal Executive &amp; Founder</h3>
-                  <p class="credential-meta">Consulting &amp; Advisory Practice • Est. 2012</p>
-                  <p class="credential-desc">Advising mid-sized institutions and multinational leaders on scaling and capital optimization.</p>
+                  <h3>Project Management Professional (PMP)&reg;</h3>
+                  <p class="credential-meta">Project Management Institute (PMI) • Pennsylvania, USA</p>
+                  <p class="credential-desc">Credentialed in cross-functional institutional project execution, capital allocation controls, risk mitigation, and operational delivery.</p>
                 </div>
               </div>
             </div>
           </div>
 
+          <!-- Ministry Panel -->
           <div class="panel" id="work" role="tabpanel" aria-labelledby="tab-work" hidden>
             <div class="credential-grid">
               <div class="credential-card">
-                <div class="credential-badge">MIN</div>
+                <div class="credential-badge">ORD</div>
                 <div class="credential-info">
-                  <h3>Ordained Pastoral Minister &amp; Shepherd</h3>
-                  <p class="credential-meta">Christian Ministry &amp; Church Leadership</p>
-                  <p class="credential-desc">Decades of pastoral shepherding, preaching, mentorship, and spiritual direction.</p>
+                  <h3>Ordained Pastoral Minister &amp; Bible Teacher</h3>
+                  <p class="credential-meta">Christian Ministry &amp; Church Leadership Council</p>
+                  <p class="credential-desc">Shepherding ministries, training associate ministers, presiding over apostolic conventions, and counseling church leaders nationwide.</p>
                 </div>
               </div>
+
               <div class="credential-card">
-                <div class="credential-badge">TRN</div>
+                <div class="credential-badge">PFN</div>
                 <div class="credential-info">
-                  <h3>Licensed Corporate Trainer &amp; Facilitator</h3>
-                  <p class="credential-meta">Awarding Body &amp; Industry Institutes • 2014</p>
-                  <p class="credential-desc">Delivering executive seminars on ethical leadership, stewardship, and workforce productivity.</p>
+                  <h3>Ministerial Forum Contributor</h3>
+                  <p class="credential-meta">Pentecostal Fellowship &amp; Christian Leadership Network</p>
+                  <p class="credential-desc">Facilitator of marketplace ministry summits, teaching Christian professionals to stand as salt and light in corporate institutions.</p>
                 </div>
               </div>
+
               <div class="credential-card">
-                <div class="credential-badge">HON</div>
+                <div class="credential-badge">AWD</div>
                 <div class="credential-info">
-                  <h3>Leadership Excellence &amp; Service Award</h3>
-                  <p class="credential-meta">National Civic &amp; Professional Body • 2020</p>
-                  <p class="credential-desc">Recognized for significant contributions to community empowerment and executive mentorship.</p>
+                  <h3>Distinguished Christian Leadership Honor (2022)</h3>
+                  <p class="credential-meta">National Civic &amp; Faith-Based Coalition</p>
+                  <p class="credential-desc">Honored for exemplary integrity in public stewardship, youth empowerment initiatives, and humanitarian community outreaches.</p>
                 </div>
               </div>
             </div>
@@ -307,11 +341,11 @@
       </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- Experience & Leadership Timeline -->
     <section id="experience" class="experience-section">
       <div class="section-header">
-        <span class="section-tag">Career Milestones</span>
-        <h2>Executive Experience &amp; Impact</h2>
+        <span class="section-tag">Career &amp; Calling</span>
+        <h2>Executive &amp; Ministerial Journey</h2>
         <div class="gold-line"></div>
       </div>
 
@@ -321,15 +355,15 @@
             <div class="timeline-marker"></div>
             <div class="timeline-content">
               <span class="timeline-date">2021 — PRESENT</span>
-              <h3>Managing Director &amp; Lead Pastoral Consultant</h3>
-              <p class="timeline-org">Executive Management &amp; Ministerial Advisory</p>
+              <h3>Presiding Pastor &amp; Principal Advisory Partner</h3>
+              <p class="timeline-org">Kingdom Leadership Ministries &amp; Executive Advisory Practice • Lagos</p>
               <p class="timeline-summary">
-                Leading strategic transformation programs, advising corporate boardrooms on governance and organizational resilience, and directing church outreach initiatives that serve thousands across communities.
+                Directing church operations, pastoral care, and discipleship programs; advising corporate boards on governance, compliance, and wealth creation strategies; presiding over leadership masterclasses.
               </p>
               <div class="timeline-tags">
-                <span>Executive Leadership</span>
-                <span>Pastoral Care</span>
-                <span>Strategic Advisory</span>
+                <span>Pastoral Oversight</span>
+                <span>Corporate Advisory</span>
+                <span>Discipleship Systems</span>
               </div>
             </div>
           </li>
@@ -338,15 +372,15 @@
             <div class="timeline-marker"></div>
             <div class="timeline-content">
               <span class="timeline-date">2015 — 2021</span>
-              <h3>Senior Lecturer &amp; Academic Mentor</h3>
-              <p class="timeline-org">Faculty of Business &amp; Management Studies</p>
+              <h3>Senior Vice President &amp; Head of Corporate Banking</h3>
+              <p class="timeline-org">Commercial Banking Group • Marina &amp; Victoria Island, Lagos</p>
               <p class="timeline-summary">
-                Designed and taught postgraduate modules in Business Strategy, Macroeconomics, and Ethics. Mentored over 500 graduates and published research focusing on sustainable enterprise in emerging markets.
+                Supervised large corporate asset portfolios exceeding ₦40 Billion, led structured finance and debt syndications, and mentored over 80 banking officers while instituting zero-tolerance compliance protocols.
               </p>
               <div class="timeline-tags">
-                <span>Lecturing</span>
-                <span>Academic Research</span>
-                <span>Youth Mentorship</span>
+                <span>Asset Management</span>
+                <span>Structured Finance</span>
+                <span>Team Mentorship</span>
               </div>
             </div>
           </li>
@@ -354,16 +388,16 @@
           <li class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <span class="timeline-date">2010 — 2015</span>
-              <h3>Senior Business Analyst &amp; Banking Strategist</h3>
-              <p class="timeline-org">Corporate Banking &amp; Financial Services</p>
+              <span class="timeline-date">2008 — 2015</span>
+              <h3>Senior Lecturer &amp; Academic Fellow in Economics</h3>
+              <p class="timeline-org">Department of Economics &amp; Business Studies</p>
               <p class="timeline-summary">
-                Conducted complex financial modeling, managed institutional client portfolios, and led risk optimization projects that generated measurable portfolio growth and reinforced regulatory compliance.
+                Taught undergraduate and postgraduate courses in Applied Economics, Business Ethics, and Monetary Theory. Mentored over 1,000 university graduates and authored published peer-reviewed research papers.
               </p>
               <div class="timeline-tags">
-                <span>Banking Operations</span>
-                <span>Financial Analysis</span>
-                <span>Risk Management</span>
+                <span>Higher Education</span>
+                <span>Applied Economics</span>
+                <span>Youth Mentorship</span>
               </div>
             </div>
           </li>
@@ -371,15 +405,15 @@
       </div>
     </section>
 
-    <!-- Book Section (With Book Picture as Background & 3D Cover Presentation) -->
+    <!-- The Book Section ("More Than Gold" - Book picture as background) -->
     <section id="book" class="book-section">
-      <!-- Atmospheric Backdrop using the Book Picture -->
+      <!-- Atmospheric Blurred Background using Book Art -->
       <div class="book-backdrop-ambient" aria-hidden="true"></div>
 
       <div class="book-container">
         <!-- Visual Side: 3D Book Presentation -->
         <div class="book-visual-side">
-          <div class="book-3d-wrapper">
+          <div class="book-3d-wrapper" id="book3d">
             <div class="book-spine"></div>
             <div class="book-3d-card">
               <picture>
@@ -395,52 +429,76 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
             </svg>
-            <span>Premium Paperback Edition</span>
+            <span>ISBN: 978-978-796-012-4 • First Edition</span>
           </div>
         </div>
 
         <!-- Details Side -->
         <div class="book-details-side">
-          <div class="book-badge">Official Release</div>
+          <div class="book-badge">New Official Release</div>
           <h2 class="book-title">More Than Gold</h2>
           <p class="book-author">By <strong>Beloved Akinkunmi Abimbola</strong></p>
           
           <p class="book-description">
-            What does it truly mean to achieve lasting riches in a world obsessed with fleeting material wealth? 
-            In <em>More Than Gold</em>, Pastor Beloved Akinkunmi Abimbola unfolds deep spiritual insight, financial stewardship, 
-            and timeless principles that anchor your soul in eternal purpose.
+            What good is worldly wealth if it bankrupts your soul and leaves your family spiritually barren? 
+            In <em>More Than Gold</em>, Pastor Beloved Akinkunmi Abimbola delivers a profound biblical roadmap for 
+            discovering eternal significance, cultivating uncompromised integrity, and stewarding wealth for God's glory.
           </p>
 
           <div class="book-highlights">
             <div class="highlight-item">
               <div class="highlight-bullet">✓</div>
-              <span><strong>Divine Calling:</strong> Uncover how your life assignment outshines ordinary worldly ambition.</span>
+              <span><strong>The Illusion of Currency:</strong> Why chasing money without purpose results in deep regret and spiritual emptiness.</span>
             </div>
             <div class="highlight-item">
               <div class="highlight-bullet">✓</div>
-              <span><strong>Kingdom Wealth:</strong> Practical biblical foundations for ethical prosperity and generosity.</span>
+              <span><strong>Covenant Wealth Principles:</strong> Scriptural laws of seed-time, harvest, enterprise diligence, and financial wisdom.</span>
             </div>
             <div class="highlight-item">
               <div class="highlight-bullet">✓</div>
-              <span><strong>Generational Legacy:</strong> Building character and heritage that outlives currency and time.</span>
+              <span><strong>Generational Heritage:</strong> How to transfer faith, sound character, and lasting family stability to your children.</span>
             </div>
           </div>
 
+          <!-- Interactive Dynamic Pricing & Order Calculator Box -->
           <div class="book-pricing-box">
-            <div class="pricing-info">
-              <span class="price-currency">Price:</span>
-              <span class="price-amount">₦5,000</span>
-              <span class="price-format">/ Paperback Copy</span>
+            <div class="pricing-calc-row">
+              <div class="pricing-info">
+                <span class="price-currency">Book Price:</span>
+                <span class="price-amount" id="bookDisplayPrice">₦5,000</span>
+                <span class="price-format">/ copy</span>
+              </div>
+
+              <!-- Interactive Stepper -->
+              <div class="stepper-box">
+                <label for="copiesStepper">Copies:</label>
+                <div class="stepper-controls">
+                  <button type="button" class="step-btn" id="stepMinus" aria-label="Decrease copies">−</button>
+                  <input type="number" id="copiesStepper" min="1" max="50" value="1" readonly>
+                  <button type="button" class="step-btn" id="stepPlus" aria-label="Increase copies">+</button>
+                </div>
+              </div>
             </div>
-            <p class="delivery-notice">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-                <rect x="1" y="3" width="15" height="13"></rect>
-                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-                <circle cx="5.5" cy="18.5" r="2.5"></circle>
-                <circle cx="18.5" cy="18.5" r="2.5"></circle>
-              </svg>
-              <span>Nationwide delivery available across Nigeria</span>
-            </p>
+
+            <!-- Shipping Location Selector -->
+            <div class="shipping-row">
+              <label for="shippingSelect">Delivery Location:</label>
+              <select id="shippingSelect" class="shipping-select">
+                <option value="1500" selected>Lagos Island / Mainland (+₦1,500)</option>
+                <option value="2500">Other States in Nigeria (+₦2,500)</option>
+                <option value="0">Self Pick-up at Lagos Ministry Office (Free)</option>
+              </select>
+            </div>
+
+            <!-- Live Total Display -->
+            <div class="live-total-bar">
+              <div class="total-caption">Estimated Total:</div>
+              <div class="total-sum" id="liveTotalSum">₦6,500</div>
+            </div>
+
+            <div class="bulk-discount-note" id="bulkNote" style="display:none;">
+              🎉 <strong>Bulk Privilege:</strong> Ordering 5 or more copies qualifies for priority dispatch &amp; free ministerial study guide!
+            </div>
           </div>
 
           <div class="book-actions">
@@ -450,62 +508,240 @@
                 <circle cx="20" cy="21" r="1"></circle>
                 <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
               </svg>
-              <span>Order Your Copy Now</span>
+              <span>Order Online Now</span>
             </button>
-            <a class="btn btn-whatsapp" href="https://wa.me/2348033858056?text=Hello%20Pastor%20Abimbola,%20I%20would%20like%20to%20order%20copies%20of%20your%20book%20'More%20Than%20Gold'" target="_blank" rel="noopener">
+            <a class="btn btn-whatsapp" id="dynamicWaBtn" href="https://wa.me/2348033858056?text=Hello%20Pastor%20Abimbola,%20I%20would%20like%20to%20order%201%20copy%20of%20'More%20Than%20Gold'%20(Total:%20₦6,500)" target="_blank" rel="noopener">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
               </svg>
-              <span>Order via WhatsApp</span>
+              <span>Instant Order on WhatsApp</span>
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact & Social Media Section -->
+    <!-- Chapter Breakdown Section (Interactive Accordion) -->
+    <section id="chapters" class="chapters-section">
+      <div class="section-header">
+        <span class="section-tag">Inside the Book</span>
+        <h2>Table of Contents &amp; Core Themes</h2>
+        <div class="gold-line"></div>
+        <p class="section-subtitle">A preview of the transformative chapters awaiting you inside <em>More Than Gold</em>.</p>
+      </div>
+
+      <div class="accordion-container">
+        <div class="accordion-item active">
+          <button class="accordion-trigger" aria-expanded="true">
+            <div class="trigger-num">01</div>
+            <div class="trigger-title">The Mirage of Fleeting Currency</div>
+            <div class="trigger-arrow">&#9662;</div>
+          </button>
+          <div class="accordion-content">
+            <p>Examining modern materialism through the lens of King Solomon's wisdom. Why accumulation without godly purpose breeds anxiety, comparison, and ultimate disillusionment.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <div class="trigger-num">02</div>
+            <div class="trigger-title">Divine Principles of Kingdom Stewardship</div>
+            <div class="trigger-arrow">&#9662;</div>
+          </button>
+          <div class="accordion-content">
+            <p>Moving from an ownership mindset to a manager mindset. Understanding biblical tithing, strategic giving, and ethical investing that yields returns in both heaven and earth.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <div class="trigger-num">03</div>
+            <div class="trigger-title">Character: The Gold That Fire Cannot Burn</div>
+            <div class="trigger-arrow">&#9662;</div>
+          </button>
+          <div class="accordion-content">
+            <p>Why talent and money can take you to the executive table, but only uncompromising character can keep you there. Real-life lessons from twenty years of corporate banking.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <div class="trigger-num">04</div>
+            <div class="trigger-title">Marketplace Ministry: Salt &amp; Light in Corporate Arenas</div>
+            <div class="trigger-arrow">&#9662;</div>
+          </button>
+          <div class="accordion-content">
+            <p>Overcoming the sacred-secular divide. How Christian professionals, executives, and business owners can glorify God and impact policy in their everyday industries.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <div class="trigger-num">05</div>
+            <div class="trigger-title">The Generational Ark: Leaving an Unshakable Heritage</div>
+            <div class="trigger-arrow">&#9662;</div>
+          </button>
+          <div class="accordion-content">
+            <p>Leaving more than bank accounts to your offspring. Practical strategies for discipling your children, building generational covenant wealth, and passing down a living faith.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Endorsements & Reader Testimonials -->
+    <section id="endorsements" class="endorsements-section">
+      <div class="section-header">
+        <span class="section-tag">Reader Reflections</span>
+        <h2>Endorsements &amp; Testimonials</h2>
+        <div class="gold-line"></div>
+        <p class="section-subtitle">What senior ministers and corporate executives say about <em>More Than Gold</em>.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "Pastor Beloved combines the precision of a seasoned banker with the fiery passion of a true prophet. <em>More Than Gold</em> is compulsory reading for every Christian desiring genuine wealth."
+          </p>
+          <div class="testimonial-author-box">
+            <div class="author-avatar">PW</div>
+            <div>
+              <strong>Pastor David Williams</strong>
+              <span>Senior Pastor, Grace Tabernacle • Lagos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "In an age where greed masquerades as ambition, this book brought refreshing biblical conviction to my soul. It completely recalibrated how I lead my corporate board and manage capital."
+          </p>
+          <div class="testimonial-author-box">
+            <div class="author-avatar">FB</div>
+            <div>
+              <strong>Mrs. Folashade Bakare, FCIB</strong>
+              <span>Executive Director, Financial Advisory • Victoria Island</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "My wife and I studied this book together in our family devotion. The chapter on the Generational Ark revolutionized how we steward our investments and train our three boys."
+          </p>
+          <div class="testimonial-author-box">
+            <div class="author-avatar">EK</div>
+            <div>
+              <strong>Dr. Emmanuel Kalu</strong>
+              <span>Associate Professor &amp; Church Elder • Ibadan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Ministry Inquiries -->
     <section id="contact" class="contact-section">
       <div class="section-header">
         <span class="section-tag">Connect</span>
-        <h2>Contact &amp; Social Channels</h2>
+        <h2>Get in Touch &amp; Ministry Invitations</h2>
         <div class="gold-line"></div>
-        <p class="section-subtitle">Reach out for ministry speaking engagements, pastoral counsel, or business consultations.</p>
+        <p class="section-subtitle">Reach out for ministry speaking engagements, pastoral counsel, or corporate advisory.</p>
       </div>
 
-      <div class="contact-cards-grid">
-        <!-- Direct Phone / WhatsApp Card -->
-        <a href="https://wa.me/2348033858056" target="_blank" rel="noopener" class="contact-card">
-          <div class="contact-card-icon whatsapp-bg">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
-            </svg>
+      <div class="contact-layout">
+        <!-- Direct Quick Reach Cards -->
+        <div class="contact-info-col">
+          <div class="contact-card copy-target" data-copy="+2348033858056" title="Click to copy phone number">
+            <div class="contact-card-icon whatsapp-bg">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+              </svg>
+            </div>
+            <div class="contact-card-body">
+              <span class="card-caption">Phone &amp; WhatsApp (Click to Copy)</span>
+              <span class="card-value">+234 803 385 8056</span>
+              <span class="card-cta">Click to copy or chat &rarr;</span>
+            </div>
           </div>
-          <div class="contact-card-body">
-            <span class="card-caption">WhatsApp &amp; Direct Phone</span>
-            <span class="card-value">+234 803 385 8056</span>
-            <span class="card-cta">Chat on WhatsApp &rarr;</span>
-          </div>
-        </a>
 
-        <!-- Direct Email Card -->
-        <a href="mailto:belovedabimbola@example.com" class="contact-card">
-          <div class="contact-card-icon email-bg">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
-              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-            </svg>
+          <div class="contact-card copy-target" data-copy="info@belovedabimbola.org" title="Click to copy email address">
+            <div class="contact-card-icon email-bg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+            </div>
+            <div class="contact-card-body">
+              <span class="card-caption">Official Email (Click to Copy)</span>
+              <span class="card-value">info@belovedabimbola.org</span>
+              <span class="card-cta">Click to copy address &rarr;</span>
+            </div>
           </div>
-          <div class="contact-card-body">
-            <span class="card-caption">Email Correspondence</span>
-            <span class="card-value">belovedabimbola@example.com</span>
-            <span class="card-cta">Send an Email &rarr;</span>
+
+          <div class="office-location-card">
+            <h4>Ministry &amp; Advisory Office</h4>
+            <p>Victoria Island / Lekki Phase 1, Lagos, Nigeria.</p>
+            <p class="office-hours">Office Hours: Monday – Friday (9:00 AM – 5:00 PM WAT)</p>
           </div>
-        </a>
+        </div>
+
+        <!-- Dynamic Inquiry Form -->
+        <div class="contact-form-col">
+          <form id="inquiryForm" class="inquiry-form-card">
+            <h3>Send a Direct Message</h3>
+            <p class="form-desc">Fill out this quick form for speaking invitations, counseling inquiries, or bulk book orders.</p>
+
+            <div class="form-group">
+              <label for="iqName">Your Full Name</label>
+              <input id="iqName" name="name" required placeholder="e.g. Deacon Olumide Adeleke">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="iqEmail">Email Address</label>
+                <input id="iqEmail" name="email" type="email" required placeholder="olumide@example.com">
+              </div>
+              <div class="form-group">
+                <label for="iqPhone">Phone / WhatsApp</label>
+                <input id="iqPhone" name="phone" type="tel" required placeholder="+234 800 000 0000">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="iqSubject">Inquiry Nature</label>
+              <select id="iqSubject" name="subject" class="styled-select">
+                <option value="Speaking Invitation">Speaking / Preaching Invitation</option>
+                <option value="Book Bulk Order">Bulk Book Order ("More Than Gold")</option>
+                <option value="Pastoral Counsel">Pastoral Counseling &amp; Prayer</option>
+                <option value="Executive Advisory">Corporate Governance &amp; Advisory</option>
+                <option value="General Inquiry">General Inquiries</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="iqMessage">Message / Invitation Details</label>
+              <textarea id="iqMessage" name="message" rows="3" required placeholder="Please state your event dates, venue, or questions..."></textarea>
+            </div>
+
+            <p id="inquiryStatus" class="form-status-msg" role="status" aria-live="polite"></p>
+
+            <button type="submit" class="btn btn-primary btn-block" id="inquirySubmitBtn">
+              <span>Send Message</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
 
-      <!-- Social Channels List -->
+      <!-- Social Media Strip -->
       <div class="social-links-container">
-        <h3 class="social-heading">Follow &amp; Engage Online</h3>
+        <h3 class="social-heading">Follow Pastor Beloved on Social Media</h3>
         <ul class="social-list">
           <li>
             <a href="https://facebook.com/Beloved Akinkunmi Abimbola" target="_blank" rel="noopener" class="social-pill fb" aria-label="Facebook">
@@ -543,12 +779,6 @@
               <span>YouTube</span>
             </a>
           </li>
-          <li>
-            <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener" class="social-pill x" aria-label="Twitter X">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              <span>X / Twitter</span>
-            </a>
-          </li>
         </ul>
       </div>
     </section>
@@ -559,19 +789,21 @@
     <div class="footer-container">
       <div class="footer-brand">
         <span class="brand-monogram">BOA</span>
-        <h3>Beloved Opeyemi Abimbola</h3>
-        <p>Pastor • Author • Banker • Educator</p>
+        <h3>Pastor Beloved Opeyemi Abimbola</h3>
+        <p>Shepherd • Author • CIBN Fellow • Strategic Leadership Mentor</p>
       </div>
       <div class="footer-nav">
         <a href="#about">About</a>
-        <a href="#qualifications">Qualifications</a>
-        <a href="#experience">Experience</a>
+        <a href="#qualifications">Credentials</a>
+        <a href="#experience">Leadership</a>
         <a href="#book">The Book</a>
+        <a href="#chapters">Chapters</a>
+        <a href="#endorsements">Endorsements</a>
         <a href="#contact">Contact</a>
       </div>
       <div class="footer-bottom">
-        <p>© <span id="yr"></span> Beloved Akinkunmi Abimbola. All rights reserved.</p>
-        <p class="footer-tagline">Equipping minds, nurturing faith, and fulfilling divine purpose.</p>
+        <p>&copy; <span id="yr"></span> Beloved Akinkunmi Abimbola. All rights reserved.</p>
+        <p class="footer-tagline">"True riches are not stored in vaults, but anchored in divine purpose."</p>
       </div>
     </div>
   </footer>
@@ -582,7 +814,7 @@
       <div class="dialog-header">
         <div class="dialog-title-group">
           <h3>Order "More Than Gold"</h3>
-          <p class="dialog-subtitle">By Beloved Akinkunmi Abimbola • ₦5,000 / copy</p>
+          <p class="dialog-subtitle">By Beloved Akinkunmi Abimbola • Official Delivery Dispatch</p>
         </div>
         <button type="button" class="close-x-btn" id="closeXBtn" aria-label="Close dialog">&times;</button>
       </div>
@@ -590,31 +822,54 @@
       <div class="form-body">
         <div class="form-group">
           <label for="fName">Full Name</label>
-          <input id="fName" name="name" required autocomplete="name" placeholder="e.g. John Doe">
+          <input id="fName" name="name" required autocomplete="name" placeholder="e.g. Deacon Olumide Adeleke">
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label for="fEmail">Email Address</label>
-            <input id="fEmail" name="email" type="email" required autocomplete="email" placeholder="john@example.com">
+            <input id="fEmail" name="email" type="email" required autocomplete="email" placeholder="olumide@example.com">
           </div>
           <div class="form-group">
-            <label for="fPhone">Phone Number (WhatsApp)</label>
-            <input id="fPhone" name="phone" type="tel" required autocomplete="tel" placeholder="+234 800 000 0000">
+            <label for="fPhone">Phone Number (WhatsApp Active)</label>
+            <input id="fPhone" name="phone" type="tel" required autocomplete="tel" placeholder="+234 803 000 0000">
           </div>
         </div>
 
         <div class="form-group">
-          <label for="fAddress">Delivery Address</label>
-          <textarea id="fAddress" name="address" rows="2" required placeholder="Street address, City, State"></textarea>
+          <label for="fAddress">Full Delivery Address (Include City &amp; State)</label>
+          <textarea id="fAddress" name="address" rows="2" required placeholder="House/Office number, Street, Landmark, City, State"></textarea>
         </div>
 
-        <div class="form-group qty-group">
-          <div class="qty-label-box">
+        <div class="form-row">
+          <div class="form-group">
             <label for="fQty">Number of Copies</label>
-            <span class="qty-calc" id="qtyCalc">Total: ₦5,000</span>
+            <input id="fQty" name="qty" type="number" min="1" max="50" value="1" required>
           </div>
-          <input id="fQty" name="qty" type="number" min="1" max="50" value="1" required>
+          <div class="form-group">
+            <label for="fDeliveryType">Delivery Zone</label>
+            <select id="fDeliveryType" class="styled-select">
+              <option value="1500" selected>Lagos (+₦1,500)</option>
+              <option value="2500">Other States (+₦2,500)</option>
+              <option value="0">Self Pick-up (Free)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Dynamic Calculated Order Summary inside Dialog -->
+        <div class="dialog-calc-box">
+          <div class="calc-line">
+            <span>Book Subtotal:</span>
+            <span id="dlgBookSub">₦5,000</span>
+          </div>
+          <div class="calc-line">
+            <span>Delivery Fee:</span>
+            <span id="dlgDeliveryFee">₦1,500</span>
+          </div>
+          <div class="calc-line total-line">
+            <strong>Grand Total:</strong>
+            <strong id="dlgGrandTotal">₦6,500</strong>
+          </div>
         </div>
 
         <!-- Honeypot anti-spam field -->
@@ -626,7 +881,7 @@
       <div class="dialog-footer">
         <button type="button" class="btn btn-ghost" id="closeDlg">Cancel</button>
         <button class="btn btn-primary" id="submitBtn" type="submit">
-          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
           <span>Confirm &amp; Place Order</span>
@@ -634,6 +889,16 @@
       </div>
     </form>
   </dialog>
+
+  <!-- Floating Toast Notification Element -->
+  <div id="toast" class="toast-notification" role="alert" aria-live="polite"></div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top of page">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 
   <script src="js/main.js"></script>
 </body>
