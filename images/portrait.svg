@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1526"/>
+      <stop offset="50%" stop-color="#112238"/>
+      <stop offset="100%" stop-color="#060c16"/>
+    </linearGradient>
+    <radialGradient id="goldGlow" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#d4af37" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#c8902a" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="rimLight" cx="70%" cy="25%" r="50%">
+      <stop offset="0%" stop-color="#fef0cd" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0a1526" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Gold Gradients -->
+    <linearGradient id="goldMetallic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fcedaa"/>
+      <stop offset="25%" stop-color="#d4af37"/>
+      <stop offset="60%" stop-color="#aa7a1e"/>
+      <stop offset="85%" stop-color="#f9e295"/>
+      <stop offset="100%" stop-color="#936712"/>
+    </linearGradient>
+    <linearGradient id="suitGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#18273b"/>
+      <stop offset="50%" stop-color="#0e1724"/>
+      <stop offset="100%" stop-color="#080e18"/>
+    </linearGradient>
+    <linearGradient id="lapelGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1f324c"/>
+      <stop offset="50%" stop-color="#121e2d"/>
+      <stop offset="100%" stop-color="#0b131d"/>
+    </linearGradient>
+    <linearGradient id="skinBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7a4627"/>
+      <stop offset="45%" stop-color="#5c341b"/>
+      <stop offset="80%" stop-color="#462412"/>
+      <stop offset="100%" stop-color="#34180a"/>
+    </linearGradient>
+    <linearGradient id="skinHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9c5f3b"/>
+      <stop offset="100%" stop-color="#5c341b"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="shadowFilter" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <clipPath id="archClip">
+      <path d="M 60,340 C 60,140 210,50 400,50 C 590,50 740,140 740,340 L 740,940 C 740,965 720,985 695,985 L 105,985 C 80,985 60,965 60,940 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="1000" fill="url(#bgGrad)"/>
+  <circle cx="400" cy="380" r="360" fill="url(#goldGlow)"/>
+  <circle cx="560" cy="260" r="280" fill="url(#rimLight)"/>
+
+  <!-- Decorative Sacred Geometry / Halo -->
+  <g opacity="0.25">
+    <circle cx="400" cy="380" r="280" fill="none" stroke="url(#goldMetallic)" stroke-width="1.5" stroke-dasharray="6,8"/>
+    <circle cx="400" cy="380" r="310" fill="none" stroke="url(#goldMetallic)" stroke-width="0.75"/>
+    <circle cx="400" cy="380" r="250" fill="none" stroke="url(#goldMetallic)" stroke-width="0.75" stroke-dasharray="2,6"/>
+  </g>
+
+  <!-- Main Arched Frame Content -->
+  <g clip-path="url(#archClip)">
+    <!-- Inner Backdrop -->
+    <rect x="0" y="0" width="800" height="1000" fill="#0c1726"/>
+    <circle cx="400" cy="320" r="320" fill="url(#goldGlow)"/>
+
+    <!-- Subtle Library / Office Atmospheric Silhouettes -->
+    <g opacity="0.15">
+      <rect x="90" y="200" width="140" height="400" fill="#243852" rx="4"/>
+      <rect x="105" y="220" width="15" height="160" fill="#3c5b82"/>
+      <rect x="125" y="210" width="20" height="170" fill="#d4af37"/>
+      <rect x="150" y="230" width="18" height="150" fill="#3c5b82"/>
+      <rect x="580" y="200" width="140" height="400" fill="#243852" rx="4"/>
+      <rect x="595" y="215" width="22" height="165" fill="#d4af37"/>
+      <rect x="622" y="235" width="16" height="145" fill="#3c5b82"/>
+    </g>
+
+    <!-- Portrait Figure: Body & Suit -->
+    <path d="M 120,1000 L 160,700 C 180,620 250,565 330,555 L 400,560 L 470,555 C 550,565 620,620 640,700 L 680,1000 Z" fill="url(#suitGrad)"/>
+    
+    <!-- White Collared Shirt -->
+    <polygon points="360,540 440,540 425,660 400,700 375,660" fill="#f8fafc"/>
+    <polygon points="360,540 330,580 375,595 385,550" fill="#e2e8f0"/>
+    <polygon points="440,540 470,580 425,595 415,550" fill="#ffffff"/>
+
+    <!-- Gold Silk Tie -->
+    <polygon points="385,550 415,550 418,600 426,780 400,820 374,780 382,600" fill="url(#goldMetallic)" filter="url(#shadowFilter)"/>
+    <g stroke="#ffffff" stroke-width="1" opacity="0.35">
+      <line x1="390" y1="580" x2="410" y2="590"/>
+      <line x1="388" y1="620" x2="412" y2="632"/>
+      <line x1="384" y1="670" x2="416" y2="685"/>
+      <line x1="380" y1="720" x2="420" y2="738"/>
+    </g>
+
+    <!-- Suit Lapels -->
+    <path d="M 320,560 L 370,690 L 320,860 L 220,1000 L 140,1000 L 170,700 C 185,630 250,575 320,560 Z" fill="url(#lapelGrad)"/>
+    <path d="M 480,560 L 430,690 L 480,860 L 580,1000 L 660,1000 L 630,700 C 615,630 550,575 480,560 Z" fill="url(#lapelGrad)"/>
+    <!-- Lapel Edge Golden Pipings -->
+    <path d="M 320,560 L 370,690 L 340,880" fill="none" stroke="url(#goldMetallic)" stroke-width="1.5" opacity="0.8"/>
+    <path d="M 480,560 L 430,690 L 460,880" fill="none" stroke="url(#goldMetallic)" stroke-width="1.5" opacity="0.8"/>
+
+    <!-- Neck -->
+    <path d="M 360,460 L 360,555 C 375,565 425,565 440,555 L 440,460 Z" fill="url(#skinBase)"/>
+    <path d="M 375,470 L 375,550 C 390,560 410,560 425,550 L 425,470 Z" fill="url(#skinHighlight)" opacity="0.4"/>
+
+    <!-- Head & Face -->
+    <ellipse cx="400" cy="385" rx="108" ry="132" fill="url(#skinBase)"/>
+    <ellipse cx="400" cy="350" rx="85" ry="90" fill="url(#skinHighlight)" opacity="0.5"/>
+    <ellipse cx="430" cy="370" rx="35" ry="45" fill="#a86842" opacity="0.35"/>
+
+    <!-- Hair & Beard -->
+    <path d="M 292,360 C 290,270 330,230 400,230 C 470,230 510,270 508,360 C 498,320 470,265 400,265 C 330,265 302,320 292,360 Z" fill="#151210"/>
+    <path d="M 345,435 C 370,428 430,428 455,435 C 440,450 420,455 400,455 C 380,455 360,450 345,435 Z" fill="#1b1715"/>
+    <path d="M 340,430 C 345,490 375,518 400,520 C 425,518 455,490 460,430 C 445,445 425,465 400,465 C 375,465 355,445 340,430 Z" fill="#1b1715"/>
+
+    <!-- Eyebrows -->
+    <path d="M 335,340 C 350,332 370,334 380,342" stroke="#181310" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+    <path d="M 465,340 C 450,332 430,334 420,342" stroke="#181310" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Eyes -->
+    <ellipse cx="360" cy="358" rx="14" ry="8" fill="#ffffff" opacity="0.9"/>
+    <circle cx="361" cy="358" r="6" fill="#1f140e"/>
+    <circle cx="363" cy="356" r="2" fill="#ffffff"/>
+
+    <ellipse cx="440" cy="358" rx="14" ry="8" fill="#ffffff" opacity="0.9"/>
+    <circle cx="439" cy="358" r="6" fill="#1f140e"/>
+    <circle cx="441" cy="356" r="2" fill="#ffffff"/>
+
+    <!-- Nose -->
+    <path d="M 400,345 L 396,395 C 390,402 392,408 400,408 C 408,408 410,402 404,395 Z" fill="#462412"/>
+
+    <!-- Smile / Lips -->
+    <path d="M 374,440 C 385,448 415,448 426,440" stroke="#7e4125" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M 378,440 C 390,446 410,446 422,440" stroke="#fcebe6" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.8"/>
+
+    <!-- Executive Gold Glasses -->
+    <g stroke="url(#goldMetallic)" stroke-width="3" fill="none">
+      <rect x="335" y="342" width="50" height="34" rx="8"/>
+      <rect x="415" y="342" width="50" height="34" rx="8"/>
+      <path d="M 385,355 Q 400,350 415,355"/>
+      <path d="M 335,352 L 305,348"/>
+      <path d="M 465,352 L 495,348"/>
+    </g>
+
+    <!-- Lapel Pin -->
+    <g transform="translate(490, 680)">
+      <circle cx="0" cy="0" r="14" fill="#152642" stroke="url(#goldMetallic)" stroke-width="2"/>
+      <path d="M -3,-7 L 3,-7 L 3,-2 L 7,-2 L 7,2 L 3,2 L 3,7 L -3,7 L -3,2 L -7,2 L -7,-2 L -3,-2 Z" fill="url(#goldMetallic)"/>
+    </g>
+
+    <rect x="60" y="800" width="680" height="200" fill="url(#suitGrad)" opacity="0.7"/>
+  </g>
+
+  <!-- Arched Golden Metallic Frame Border -->
+  <path d="M 60,340 C 60,140 210,50 400,50 C 590,50 740,140 740,340 L 740,940 C 740,965 720,985 695,985 L 105,985 C 80,985 60,965 60,940 Z" fill="none" stroke="url(#goldMetallic)" stroke-width="6" filter="url(#shadowFilter)"/>
+  <path d="M 50,340 C 50,130 205,40 400,40 C 595,40 750,130 750,340 L 750,950 C 750,978 728,1000 700,1000 L 100,1000 C 72,1000 50,978 50,950 Z" fill="none" stroke="url(#goldMetallic)" stroke-width="1" opacity="0.4"/>
+
+  <!-- Plaque Badge at Bottom -->
+  <g transform="translate(400, 930)">
+    <rect x="-240" y="-30" width="480" height="60" rx="30" fill="#091424" stroke="url(#goldMetallic)" stroke-width="2" filter="url(#shadowFilter)"/>
+    <text x="0" y="-3" text-anchor="middle" font-family="'Libre Baskerville', Georgia, serif" font-size="20" font-weight="700" fill="url(#goldMetallic)" letter-spacing="2">BELOVED O. ABIMBOLA</text>
+    <text x="0" y="18" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#cbd5e1" letter-spacing="3">AUTHOR • BANKER • PASTOR</text>
+  </g>
+</svg>
