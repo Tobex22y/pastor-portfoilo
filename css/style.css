@@ -3,34 +3,34 @@
    ========================================================================== */
 
 :root {
-  /* Color Palette - Midnight Sapphire Navy & Warm Metallic Gold */
-  --navy-950: #060b14;
-  --navy-900: #0b1526;
-  --navy-850: #0f1d33;
-  --navy-800: #152744;
-  --navy-700: #1e365d;
-  --navy-600: #2b4977;
+  /* Warm paper, ink and oxblood */
+  --navy-950: #1b1a17;
+  --navy-900: #25221e;
+  --navy-850: #302b26;
+  --navy-800: #3a342e;
+  --navy-700: #50463d;
+  --navy-600: #66594d;
 
-  --gold-500: #d4af37;
-  --gold-400: #f1cf68;
-  --gold-300: #fae29c;
-  --gold-600: #b58d20;
-  --gold-700: #8f6d14;
-  --gold-glow: rgba(212, 175, 55, 0.28);
-  --gold-glow-strong: rgba(212, 175, 55, 0.5);
+  --gold-500: #7a2e2a;
+  --gold-400: #873a35;
+  --gold-300: #a25750;
+  --gold-600: #672521;
+  --gold-700: #511d1a;
+  --gold-glow: rgba(122, 46, 42, 0.12);
+  --gold-glow-strong: rgba(122, 46, 42, 0.18);
 
-  --bg: #070d18;
-  --bg-surface: #0c1728;
-  --bg-card: #112036;
-  --bg-card-hover: #172a47;
-  --border-card: rgba(212, 175, 55, 0.18);
-  --border-card-hover: rgba(212, 175, 55, 0.45);
-  --line: rgba(217, 224, 232, 0.12);
+  --bg: #f6f1e7;
+  --bg-surface: #f1eadf;
+  --bg-card: #fbf8f1;
+  --bg-card-hover: #efe7dc;
+  --border-card: rgba(27, 26, 23, 0.14);
+  --border-card-hover: rgba(122, 46, 42, 0.38);
+  --line: rgba(27, 26, 23, 0.14);
 
-  --text-main: #f8fafc;
-  --text-lead: #e2e8f0;
-  --text-muted: #94a3b8;
-  --text-light: #64748b;
+  --text-main: #1b1a17;
+  --text-lead: #39342e;
+  --text-muted: #625b52;
+  --text-light: #786f64;
 
   --whatsapp-color: #25d366;
   --whatsapp-hover: #1eb956;
@@ -43,9 +43,9 @@
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 24px;
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
-  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.35);
-  --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 3px 10px rgba(38, 30, 24, 0.08);
+  --shadow-md: 0 8px 24px rgba(38, 30, 24, 0.12);
+  --shadow-lg: 0 16px 38px rgba(38, 30, 24, 0.16);
   --shadow-gold: 0 8px 32px var(--gold-glow);
 }
 
@@ -57,7 +57,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 86px;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2086,5 +2086,821 @@ section {
 
   .accordion-content {
     padding-left: 24px;
+  }
+}
+
+/* Warm editorial theme overrides */
+body {
+  background-color: var(--bg);
+  background-image: none;
+  color: var(--text-main);
+}
+
+.nav {
+  background: var(--bg);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.brand-monogram,
+.badge-icon-box,
+.author-avatar {
+  background: var(--gold-500);
+  color: #fffaf3;
+  box-shadow: none;
+}
+
+.nav-cta,
+.btn-primary,
+.tabs button[aria-selected="true"] {
+  background: var(--gold-500);
+  border-color: var(--gold-500);
+  color: #fffaf3 !important;
+  box-shadow: none;
+}
+
+.nav-cta:hover,
+.btn-primary:hover,
+.tabs button[aria-selected="true"]:hover {
+  background: var(--gold-600);
+  border-color: var(--gold-600);
+  color: #fffaf3;
+  filter: none;
+  transform: none;
+}
+
+.btn-ghost,
+.btn-whatsapp {
+  box-shadow: none;
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: rgba(27, 26, 23, 0.3);
+  color: var(--text-main);
+  backdrop-filter: none;
+}
+
+.btn-ghost:hover,
+.btn-whatsapp:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.hero-title,
+.pillar-content h3,
+.credential-info h3,
+.timeline-content h3,
+.book-title,
+.accordion-trigger,
+.testimonial-author-box strong,
+.card-value,
+.inquiry-form-card h3,
+.dialog-title-group h3,
+.footer-brand h3 {
+  color: var(--text-main);
+  text-shadow: none;
+}
+
+.book-author strong,
+.trigger-title,
+.total-caption,
+.form-group label,
+.stepper-box label,
+.dialog-title-group h3 {
+  color: var(--text-main);
+}
+
+.scripture-quote {
+  margin: 0;
+  color: var(--gold-500);
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.portrait-halo,
+.portrait-overlay-badge,
+.floating-stat-tag {
+  display: none;
+}
+
+.portrait-arch {
+  border: 1px solid rgba(27, 26, 23, 0.18);
+  border-radius: 2px;
+  background: var(--bg-surface);
+  box-shadow: none;
+  transition: none;
+}
+
+.portrait-arch:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.portrait-img {
+  filter: brightness(1.18) contrast(0.96);
+}
+
+.hero-metrics {
+  gap: 8px 20px;
+  border-top: 0;
+  padding-top: 0;
+}
+
+.metric-num,
+.metric-plus {
+  font-size: 1rem;
+  color: var(--text-main);
+}
+
+.section-tag,
+.hero-role-tags,
+.book-author,
+.credential-meta,
+.timeline-date,
+.footer-brand p,
+.footer-nav a:hover {
+  color: var(--gold-500);
+}
+
+.gold-line {
+  height: 2px;
+  background: var(--gold-500);
+  border-radius: 0;
+}
+
+.book-section,
+.book-pricing-box,
+.dialog-calc-box,
+.office-location-card {
+  background: var(--bg-surface);
+  box-shadow: none;
+}
+
+.book-section {
+  border-radius: 2px;
+}
+
+.book-backdrop-ambient {
+  display: none;
+}
+
+.book-title {
+  text-shadow: none;
+}
+
+.timeline-marker {
+  box-shadow: none;
+}
+
+.testimonial-stars {
+  color: var(--gold-500);
+  letter-spacing: 0;
+}
+
+.footer {
+  background: #eee6da;
+}
+
+.order-dialog {
+  background: var(--bg-card);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: var(--shadow-lg);
+}
+
+.order-dialog::backdrop {
+  background: rgba(27, 26, 23, 0.45);
+  backdrop-filter: none;
+}
+
+.nav-cta,
+.tabs button,
+.book-edition-tag,
+.book-badge,
+.credential-badge,
+.timeline-tags span,
+.social-pill,
+.toast-notification {
+  border-radius: 4px;
+}
+
+.nav-cta {
+  padding: 8px 14px !important;
+}
+
+.form-group input,
+.form-group textarea,
+.shipping-select,
+.styled-select,
+.stepper-controls,
+.stepper-controls input {
+  background: #fffdf8;
+  color: var(--text-main);
+  border-color: rgba(27, 26, 23, 0.2);
+}
+
+.stepper-controls {
+  border: 1px solid rgba(27, 26, 23, 0.2);
+}
+
+.stepper-controls input {
+  border: 0;
+}
+
+.btn-whatsapp {
+  background: #28704a;
+  border-color: #28704a;
+}
+
+.btn-whatsapp:hover {
+  background: #205d3d;
+  border-color: #205d3d;
+}
+
+.quote-card,
+.pillar-card,
+.credential-card,
+.timeline-content,
+.testimonial-card,
+.contact-card,
+.inquiry-form-card,
+.accordion-item {
+  box-shadow: none;
+}
+
+.pillar-card,
+.credential-card,
+.timeline-content,
+.testimonial-card,
+.contact-card,
+.inquiry-form-card,
+.accordion-item {
+  background: var(--bg-card);
+  border-color: var(--border-card);
+}
+
+.quote-card {
+  background: #efe7dc;
+  border-left-color: var(--gold-500);
+}
+
+.quote-text {
+  color: var(--text-main);
+}
+
+.quote-mark {
+  color: rgba(122, 46, 42, 0.14);
+}
+
+.pillar-icon,
+.credential-badge,
+.highlight-bullet {
+  background: #f0e5dc;
+  color: var(--gold-500);
+  border-color: rgba(122, 46, 42, 0.2);
+}
+
+.book-badge,
+.book-edition-tag {
+  background: #f0e5dc;
+  color: var(--gold-500);
+  border-color: rgba(122, 46, 42, 0.2);
+}
+
+.live-total-bar {
+  background: #f0e5dc;
+  border-color: rgba(122, 46, 42, 0.22);
+}
+
+.bulk-discount-note {
+  color: #286442;
+  background: #edf3e9;
+  border-color: #cbdcc7;
+}
+
+.toast-notification {
+  background: var(--bg-card);
+  color: var(--text-main);
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 1020px) {
+  .burger {
+    display: flex;
+  }
+
+  #menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border-card);
+    padding: 20px 24px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    box-shadow: var(--shadow-md);
+  }
+
+  #menu.open {
+    display: flex;
+  }
+
+  #menu a {
+    padding: 10px 0;
+    font-size: 1.05rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  #menu a:last-child {
+    border-bottom: none;
+  }
+
+  .nav-cta {
+    text-align: center;
+    margin-top: 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-container {
+    min-height: 72px;
+    padding: 10px 16px;
+    gap: 12px;
+  }
+
+  .brand {
+    min-width: 0;
+    gap: 10px;
+  }
+
+  .brand-monogram {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+  }
+
+  .brand-name {
+    font-size: 0.94rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.62rem;
+    letter-spacing: 0.7px;
+  }
+
+  .burger {
+    flex: 0 0 auto;
+    padding: 8px;
+  }
+
+  section {
+    padding: 48px 18px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 38px;
+    padding-bottom: 48px;
+    gap: 30px;
+  }
+
+  .hero-content {
+    gap: 14px;
+  }
+
+  h1,
+  .hero-title {
+    font-size: clamp(2.1rem, 9vw, 2.8rem);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+  }
+
+  h2 {
+    font-size: clamp(1.65rem, 7vw, 2.1rem);
+  }
+
+  .scripture-quote {
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .hero-role-tags {
+    font-size: 0.86rem;
+    line-height: 1.65;
+  }
+
+  .lead {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .hero-actions,
+  .book-actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-actions .btn,
+  .book-actions .btn {
+    width: 100%;
+    min-height: 48px;
+    padding: 13px 16px;
+    font-size: 0.92rem;
+  }
+
+  .hero-portrait-wrapper .portrait-arch {
+    width: min(100%, 280px);
+    max-width: 280px;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section-subtitle {
+    font-size: 0.96rem;
+  }
+
+  .about-grid,
+  .contact-layout {
+    gap: 28px;
+  }
+
+  .bio-intro {
+    font-size: 1.03rem;
+  }
+
+  .quote-card {
+    margin-top: 24px;
+    padding: 20px;
+  }
+
+  .pillar-card,
+  .credential-card,
+  .timeline-content,
+  .contact-card {
+    padding: 18px;
+  }
+
+  .pillar-card {
+    gap: 14px;
+  }
+
+  .pillar-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .credential-card {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .tabs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .tabs button {
+    justify-content: flex-start;
+    width: 100%;
+    padding: 12px 16px;
+  }
+
+  .timeline {
+    padding-left: 24px;
+  }
+
+  .timeline-marker {
+    left: -32px;
+  }
+
+  .timeline-item {
+    padding-bottom: 28px;
+  }
+
+  .timeline-tags {
+    gap: 6px;
+  }
+
+  .timeline-tags span {
+    font-size: 0.72rem;
+    padding: 4px 8px;
+  }
+
+  .book-section {
+    margin: 20px auto;
+    padding: 34px 18px;
+  }
+
+  .book-container {
+    gap: 28px;
+  }
+
+  .book-3d-wrapper {
+    width: min(58vw, 210px);
+  }
+
+  .book-details-side {
+    gap: 12px;
+  }
+
+  .book-description {
+    font-size: 0.98rem;
+  }
+
+  .book-pricing-box {
+    padding: 16px;
+  }
+
+  .pricing-calc-row {
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .pricing-info {
+    flex-wrap: wrap;
+    gap: 4px 7px;
+  }
+
+  .price-amount {
+    font-size: 1.65rem;
+  }
+
+  .stepper-box {
+    gap: 6px;
+  }
+
+  .stepper-box label {
+    font-size: 0.8rem;
+  }
+
+  .accordion-trigger {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .trigger-title {
+    font-size: 0.94rem;
+  }
+
+  .accordion-content {
+    padding: 0 16px 16px 58px;
+  }
+
+  .testimonial-card {
+    padding: 22px 18px;
+  }
+
+  .contact-card {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .contact-card-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .card-value {
+    font-size: 0.96rem;
+    overflow-wrap: anywhere;
+  }
+
+  .inquiry-form-card {
+    padding: 22px 18px;
+  }
+
+  .social-list {
+    gap: 8px;
+  }
+
+  .social-pill {
+    padding: 9px 12px;
+  }
+
+  .footer {
+    padding: 44px 18px 24px;
+    margin-top: 32px;
+  }
+
+  .footer-brand p {
+    max-width: 32ch;
+    line-height: 1.6;
+  }
+
+  .footer-nav {
+    gap: 12px 18px;
+  }
+
+  .toast-notification {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    text-align: center;
+  }
+
+  .back-to-top {
+    left: 16px;
+    bottom: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-name {
+    font-size: 0.86rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.56rem;
+    letter-spacing: 0.4px;
+  }
+
+  .nav-container {
+    padding-inline: 12px;
+  }
+
+  .pricing-calc-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .stepper-box {
+    justify-content: space-between;
+  }
+}
+
+/* Mobile polish: comfortable touch targets, compact spacing, and safe scrolling. */
+@media (max-width: 600px) {
+  html {
+    scroll-padding-top: 78px;
+  }
+
+  section {
+    width: 100%;
+    padding-inline: clamp(16px, 5vw, 24px);
+    scroll-margin-top: 78px;
+  }
+
+  .nav {
+    z-index: 1000;
+  }
+
+  .nav-container {
+    min-height: 68px;
+    padding-inline: max(16px, env(safe-area-inset-left));
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-monogram {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-name {
+    font-size: clamp(0.82rem, 3.8vw, 0.94rem);
+    line-height: 1.25;
+  }
+
+  .brand-subtitle {
+    font-size: clamp(0.52rem, 2.5vw, 0.62rem);
+    letter-spacing: 0.045em;
+  }
+
+  .burger {
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+  }
+
+  #menu {
+    max-height: calc(100dvh - 68px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 12px 20px max(20px, env(safe-area-inset-bottom));
+  }
+
+  #menu a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  #menu .nav-cta {
+    justify-content: center;
+  }
+
+  .hero {
+    padding-top: 32px;
+    padding-bottom: 40px;
+    gap: 24px;
+  }
+
+  .hero-title {
+    max-width: 16ch;
+    font-size: clamp(2rem, 9.5vw, 2.7rem);
+    overflow-wrap: anywhere;
+  }
+
+  .hero-role-tags {
+    max-width: 38ch;
+  }
+
+  .hero-portrait-wrapper .portrait-arch {
+    width: min(76vw, 280px);
+  }
+
+  .hero-actions .btn,
+  .book-actions .btn {
+    min-height: 48px;
+    line-height: 1.35;
+    white-space: normal;
+  }
+
+  .section-header h2 {
+    text-wrap: balance;
+  }
+
+  .pillar-card,
+  .credential-card,
+  .timeline-content,
+  .testimonial-card,
+  .contact-card,
+  .inquiry-form-card {
+    min-width: 0;
+  }
+
+  .pillar-content,
+  .credential-info,
+  .contact-card > :last-child {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .book-section {
+    width: calc(100% - 24px);
+    padding: 30px 16px;
+  }
+
+  .book-edition-tag {
+    max-width: 100%;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .shipping-select,
+  .styled-select,
+  .form-group input,
+  .form-group textarea {
+    min-height: 44px;
+    font-size: 16px;
+  }
+
+  .step-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .stepper-controls input {
+    height: 44px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-title {
+    font-size: clamp(1.85rem, 9vw, 2.2rem);
+  }
+
+  .brand-monogram {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
+  .pillar-card {
+    gap: 10px;
+    padding: 16px 14px;
+  }
+
+  .live-total-bar {
+    gap: 8px;
+    padding-inline: 12px;
+  }
+
+  .total-sum {
+    font-size: 1.35rem;
   }
 }
