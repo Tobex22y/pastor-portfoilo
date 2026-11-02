@@ -1,5 +1,5 @@
 /**
- * Pastor Beloved Opeyemi Abimbola - Interactive Scripts
+ * Beloved Akinkunmi Abimbola - Interactive Scripts
  * Dynamic UI Features: Scroll progress, Live Counters, Steppers,
  * Accordions, Copy-to-Clipboard Toast, and Order Form Handling.
  */
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const copyText = copies === 1 ? '1 copy' : `${copies} copies`;
       const locationText = shippingSelect ? shippingSelect.options[shippingSelect.selectedIndex].text.split('(')[0].trim() : 'Lagos';
       const encodedMsg = encodeURIComponent(
-        `Hello Pastor Abimbola, I would like to order ${copyText} of 'More Than Gold' (${locationText}). Estimated Total: ₦${total.toLocaleString()}`
+        `Hello Beloved Akinkunmi Abimbola, I would like to order ${copyText} of 'More Than Gold' (${locationText}). Estimated Total: ₦${total.toLocaleString()}`
       );
       dynamicWaBtn.href = `https://wa.me/2348033858056?text=${encodedMsg}`;
     }
@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         if (inquiryStatus) {
           inquiryStatus.className = 'form-status-msg success';
-          inquiryStatus.textContent = 'Thank you! Your inquiry has been sent to Pastor Beloved\'s office. We will reply promptly.';
+          inquiryStatus.textContent = 'Thank you! Your inquiry has been sent to Beloved Akinkunmi Abimbola\'s office. We will reply promptly.';
         }
         showToast('✓ Message sent successfully to the secretariat.');
         inquiryForm.reset();

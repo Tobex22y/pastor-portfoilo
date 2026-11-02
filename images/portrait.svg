@@ -166,7 +166,7 @@
   <!-- Plaque Badge at Bottom -->
   <g transform="translate(400, 930)">
     <rect x="-240" y="-30" width="480" height="60" rx="30" fill="#091424" stroke="url(#goldMetallic)" stroke-width="2" filter="url(#shadowFilter)"/>
-    <text x="0" y="-3" text-anchor="middle" font-family="'Libre Baskerville', Georgia, serif" font-size="20" font-weight="700" fill="url(#goldMetallic)" letter-spacing="2">BELOVED O. ABIMBOLA</text>
-    <text x="0" y="18" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#cbd5e1" letter-spacing="3">AUTHOR • BANKER • PASTOR</text>
+    <text x="0" y="-3" text-anchor="middle" font-family="'Libre Baskerville', Georgia, serif" font-size="18" font-weight="700" fill="url(#goldMetallic)" letter-spacing="1.5">BELOVED AKINKUNMI ABIMBOLA</text>
+    <text x="0" y="18" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#cbd5e1" letter-spacing="2.5">EXECUTIVE DIRECTOR • AUTHOR • PASTOR</text>
   </g>
 </svg>

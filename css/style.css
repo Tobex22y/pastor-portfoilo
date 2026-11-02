@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Pastor Beloved Opeyemi Abimbola - Revamped Bespoke Portfolio Stylesheet
+   Beloved Akinkunmi Abimbola - Revamped Bespoke Portfolio Stylesheet
    ========================================================================== */
 
 :root {
@@ -180,7 +180,7 @@ p {
   height: 44px;
   display: grid;
   place-items: center;
-  border-radius: 10px;
+  border-radius: 20px;
   background: linear-gradient(135deg, var(--gold-400), var(--gold-600));
   color: var(--navy-950);
   font-family: var(--serif);
@@ -967,17 +967,17 @@ section {
   padding: 72px 48px;
 }
 
-/* Atmospheric Backdrop Using Book Artwork */
+/* Atmospheric Backdrop Using Real Book Artwork */
 .book-backdrop-ambient {
   position: absolute;
   inset: -40px;
   background-image: 
-    linear-gradient(135deg, rgba(7, 13, 24, 0.92) 0%, rgba(12, 23, 38, 0.95) 60%, rgba(7, 13, 24, 0.98) 100%),
-    url('../images/book-cover.svg');
+    linear-gradient(135deg, rgba(7, 13, 24, 0.88) 0%, rgba(12, 23, 38, 0.90) 50%, rgba(7, 13, 24, 0.94) 100%),
+    url('../images/book-cover.jpg');
   background-size: cover;
-  background-position: center;
-  filter: blur(36px);
-  opacity: 0.45;
+  background-position: center 30%;
+  filter: blur(32px);
+  opacity: 0.6;
   pointer-events: none;
   z-index: 1;
 }
@@ -2904,3 +2904,144 @@ body {
     font-size: 1.35rem;
   }
 }
+
+/* ==========================================================================
+   Initiatives, Philanthropy & Additional Books
+   ========================================================================== */
+.initiatives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin-top: 36px;
+}
+
+.initiative-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.initiative-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-400), var(--gold-600));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.initiative-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-card-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.initiative-card:hover::before {
+  opacity: 1;
+}
+
+.initiative-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--gold-400);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.initiative-card h3 {
+  font-size: 1.22rem;
+  margin: 0;
+  color: var(--text-main);
+}
+
+.initiative-meta {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--gold-400);
+  margin: -6px 0 4px;
+}
+
+.initiative-card p {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: var(--text-lead);
+  margin: 0;
+}
+
+/* Other Published Works Showcase */
+.other-books-section {
+  margin-top: 48px;
+  padding-top: 36px;
+  border-top: 1px solid var(--line);
+}
+
+.other-books-title {
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--text-main);
+  margin-bottom: 24px;
+}
+
+.other-books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.other-book-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.other-book-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold-400);
+}
+
+.other-book-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--gold-400);
+  background: rgba(212, 175, 55, 0.12);
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.other-book-card h4 {
+  font-size: 1.15rem;
+  margin: 0;
+  color: var(--text-main);
+}
+
+.other-book-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+}
+

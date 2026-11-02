@@ -1,6 +1,6 @@
 # Website Images Directory
 
-This directory stores the visual assets for the Beloved Opeyemi Abimbola personal website:
+This directory stores the visual assets for the Beloved Akinkunmi Abimbola personal website:
 
 1. **`portrait.svg` / `portrait.jpg`**:
    - Used in the Hero section, replacing the former "OA" placeholder box.
