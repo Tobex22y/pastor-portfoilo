@@ -8,7 +8,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..900;1,9..40,300..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function(){
+      try{
+        var t = localStorage.getItem('theme') ||
+        (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark':'light');
+        document.documentElement.setAttribute('data-theme', t);
+      }catch (e) {}
+    }) ();
+  </script>
 </head>
 <body>
 
@@ -27,6 +37,9 @@
           <span class="brand-subtitle">Executive Director • Author • Pastor</span>
         </div>
       </a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode">
+        <i class="fa-solid fa-moon"aria-hidden="true"></i>
+      </button>
       <button class="burger" aria-label="Toggle navigation menu" aria-expanded="false" id="burgerBtn">
         <span></span>
         <span></span>
@@ -34,6 +47,7 @@
       </button>
       <nav id="menu">
         <a href="#about">About</a>
+        <a href="#beloved">Beloved As</a>
         <a href="#qualifications">Credentials</a>
         <a href="#experience">Leadership</a>
         <a href="#book">The Book</a>
@@ -88,7 +102,7 @@
         <div class="hero-metrics">
           <div class="metric-item">
             <div class="metric-num-wrap">
-              <span class="metric-num counter" data-target="1000">0</span>
+              <span class="metric-num counter" data-target="100">0</span>
               <span class="metric-plus">+</span>
             </div>
             <span class="metric-label">Youths &amp; Professionals Mentored Weekly</span>
@@ -235,6 +249,207 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Beloved As: role stories -->
+    <section id="beloved" class="beloved-section" aria-labelledby="belovedTitle">
+      <div class="b-opener">
+        <div class="b-opener-text">
+          <span class="section-tag">The Man Behind the Titles</span>
+          <h2 id="belovedTitle">Beloved in every role he carries</h2>
+          <div class="gold-line"></div>
+          <p>A life is never just one thing. At the pulpit, at home, in the boardroom and in the lives of the young leaders he mentors, the same heart shows up.</p>
+          <p>Here are the seven ways the people closest to him know and love him.</p>
+        </div>
+        <div class="b-triptych" aria-hidden="true">
+          <img src="images/beloved/prophet.jpg" alt="" loading="lazy">
+          <img src="images/beloved/priest.jpg" alt="" loading="lazy">
+          <img src="images/FB_IMG_1793006921246.jpg" alt="" loading="lazy">
+        </div>
+      </div>
+
+      <div class="b-facts">
+        <div><strong>7</strong><span>roles, one heart</span></div>
+        <div><strong>100+</strong><span>young people mentored every week</span></div>
+        <div><strong>3</strong><span>books authored</span></div>
+        <div><strong>3</strong><span>straight years above revenue target at Sterling Bank</span></div>
+      </div>
+
+      <nav class="beloved-nav" aria-label="Roles">
+        <a href="#b-priest">Priest</a>
+        <a href="#b-husband">Husband</a>
+        <a href="#b-father">Father</a>
+        <a href="#b-coach">Coach</a>
+        <a href="#b-prophet">Prophet</a>
+        <a href="#b-leader">Leader</a>
+        <a href="#b-finance">Financial Expert</a>
+      </nav>
+
+      <article class="b-chapter" id="b-priest">
+        <span class="b-watermark" aria-hidden="true">Priest</span>
+        <figure class="b-photo">
+          <button type="button" aria-label="View photo larger"><img src="images/beloved/priest.jpg" alt="Ministering at the pulpit at a Sunday service" style="--pos:center 20%" loading="lazy" width="1024" height="1280"></button>
+        </figure>
+        <div class="b-text">
+          <h3>Beloved as a <em>Priest</em></h3>
+          <p class="b-tagline">A shepherd who stays close to the flock</p>
+          <p>Long before the titles, there was a calling. He is a devoted follower of Christ and a passionate teacher of the Word, and it shows the moment he steps up to speak.</p>
+          <p>As pioneer Pastor of the Youth Church at GOFAMINT Pentecost Arena, Ikere-Ekiti, he did not simply begin a service. He built a place for young people to be raised into leaders who are spiritually grounded, purpose-driven and socially relevant.</p>
+          <p>Those who sit under his ministry say the same thing: he makes faith feel near. The Word is opened with clarity, prayer is offered with tenderness, and people leave knowing how to live it out on Monday morning.</p>
+          <ul class="b-moments">
+            <li>Opens the Word with clarity and warmth</li>
+            <li>Prays with and for the people he leads</li>
+            <li>Builds a home for young people to grow in</li>
+          </ul>
+          <blockquote>Faith lived out loud, with a gentle hand.</blockquote>
+          <p class="b-verse"><span>Psalm 23:1</span> The Lord is my shepherd; I shall not want.</p>
+        </div>
+      </article>
+      <article class="b-chapter" id="b-husband">
+        <span class="b-watermark" aria-hidden="true">Husband</span>
+        <figure class="b-photo">
+          <button type="button" aria-label="View photo larger"><img src="images/beloved/husband.jpg" alt="Seated in a leather armchair in a dark suit" style="--pos:center 15%" loading="lazy" width="864" height="1080"></button>
+        </figure>
+        <div class="b-text">
+          <h3>Beloved as a <em>Husband</em></h3>
+          <p class="b-tagline">Steady love, chosen again every day</p>
+          <p>Behind every public assignment is a private covenant. He is happily married to Glorious Abimbola, and the people who know them see a partnership built on honour, prayer and shared purpose.</p>
+          <p>He believes the home is where a man's message is first tested. Before the stage, the pulpit or the boardroom, there is a wife to love well and a household to lead with gentleness.</p>
+          <p>For him, marriage is ministry in its purest form, and a strong home is the quietest proof of everything he teaches.</p>
+          <ul class="b-moments">
+            <li>Honours his wife in word and deed</li>
+            <li>Treats the home as his first ministry</li>
+            <li>Leads with gentleness before authority</li>
+          </ul>
+          <blockquote>The first church he serves is his home.</blockquote>
+          <p class="b-verse"><span>Ephesians 5:25</span> Husbands, love your wives, even as Christ also loved the church.</p>
+        </div>
+      </article>
+      <article class="b-chapter" id="b-father">
+        <span class="b-watermark" aria-hidden="true">Father</span>
+        <figure class="b-photo">
+          <button type="button" aria-label="View photo larger"><img src="images/beloved/father.jpg" alt="Standing in white and navy traditional attire with a walking cane" style="--pos:center 25%" loading="lazy" width="1024" height="1280"></button>
+        </figure>
+        <div class="b-text">
+          <h3>Beloved as a <em>Father</em></h3>
+          <p class="b-tagline">Rooted in heritage, raising a legacy</p>
+          <p>His children actively serve God with their time, gifts and talents. It is a quiet testimony, and for a father it may be the greatest one.</p>
+          <p>He carries the dignity of a father in the fullest sense: protecting, guiding and correcting with the same love. Beyond his own home, many young people call him a spiritual father because he makes room for them.</p>
+          <p>What he hands down is bigger than advice. It is character, values and a name worth carrying into the next generation.</p>
+          <ul class="b-moments">
+            <li>Guides and corrects with love</li>
+            <li>Raises children who serve God</li>
+            <li>A spiritual father to many young people</li>
+          </ul>
+          <blockquote>A father's greatest gift is a legacy that outlives him.</blockquote>
+          <p class="b-verse"><span>Proverbs 22:6</span> Train up a child in the way he should go.</p>
+        </div>
+      </article>
+      <article class="b-chapter" id="b-coach">
+        <span class="b-watermark" aria-hidden="true">Coach</span>
+        <figure class="b-photo">
+          <button type="button" aria-label="View photo larger"><img src="images/beloved/coach.jpg" alt="Teaching on stage at a leadership academy session" style="--pos:center 35%" loading="lazy" width="960" height="1280"></button>
+        </figure>
+        <div class="b-text">
+          <h3>Beloved as a <em>Coach</em></h3>
+          <p class="b-tagline">He sees who you can become</p>
+          <p>As Executive Director of Pentecost Leadership Academy, he coaches people to lead themselves first, because the one who cannot lead himself will struggle to lead anyone else.</p>
+          <p>Every week he mentors more than 1,000 young people: students, corps members, entrepreneurs and young professionals. He asks sharp questions, gives honest feedback and holds people to the standard of who they are meant to be.</p>
+          <p>Ask around and many will tell you their turning point was a single conversation with him.</p>
+          <ul class="b-moments">
+            <li>Mentors 1,000+ young people every week</li>
+            <li>Asks the questions others avoid</li>
+            <li>Calls out the best in every person</li>
+          </ul>
+          <blockquote>Lead yourself well, and others will follow.</blockquote>
+          <p class="b-verse"><span>Proverbs 27:17</span> Iron sharpeneth iron; so a man sharpeneth the countenance of his friend.</p>
+        </div>
+      </article>
+      <article class="b-chapter" id="b-prophet">
+        <span class="b-watermark" aria-hidden="true">Prophet</span>
+        <figure class="b-photo">
+          <button type="button" aria-label="View photo larger"><img src="images/beloved/prophet.jpg" alt="Portrait in royal blue traditional regalia" style="--pos:center 20%" loading="lazy" width="864" height="1080"></button>
+        </figure>
+        <div class="b-text">
+          <h3>Beloved as a <em>Prophet</em></h3>
+          <p class="b-tagline">A voice that brings clarity and courage</p>
+          <p>He is widely recognised for his apostolic calling and prophetic grace. When he speaks into a life or a season, people listen, because his words carry both conviction and care.</p>
+          <p>His message calls people to look up, to trust again and to step into what God has prepared for them. It is always rooted in Scripture and delivered with humility.</p>
+          <p>In seasons of uncertainty, his word steadies hearts and gives direction to those who are not sure where to turn next.</p>
+          <ul class="b-moments">
+            <li>Speaks with conviction and compassion</li>
+            <li>Keeps every word rooted in Scripture</li>
+            <li>Gives direction in uncertain seasons</li>
+          </ul>
+          <blockquote>Hear it with faith. Walk it out with wisdom.</blockquote>
+          <p class="b-verse"><span>Amos 3:7</span> Surely the Lord God will do nothing, but he revealeth his secret unto his servants the prophets.</p>
+        </div>
+      </article>
+      <article class="b-chapter" id="b-leader">
+        <span class="b-watermark" aria-hidden="true">Leader</span>
+        <figure class="b-photo">
+          <button type="button" aria-label="View photo larger"><img src="images/FB_IMG_1793006921246.jpg" alt="Formal portrait in a navy suit and red tie" style="--pos:center 25%" loading="lazy" width="1024" height="1280"></button>
+        </figure>
+        <div class="b-text">
+          <h3>Beloved as a <em>Leader</em></h3>
+          <p class="b-tagline">Vision with humility</p>
+          <p>His leadership has been tested in boardrooms and in ministry. As Zonal Head, Southwest 2 at Sterling Bank, he supervised operations across Ondo and Ekiti States, and the zone surpassed its revenue targets three years in a row.</p>
+          <p>He later oversaw strategic operations across multiple high-value branches at PremiumTrust Bank in Ogun State. Today he is also Provost of Pentecost School of Ministry, preparing the next set of ministers.</p>
+          <p>Through all of it, his mission has stayed the same: to raise a generation that is earthly relevant and heavenly conscious.</p>
+          <ul class="b-moments">
+            <li>Led a zone to three straight years above target</li>
+            <li>Oversees Pentecost School of Ministry as Provost</li>
+            <li>Builds leaders, not followers</li>
+          </ul>
+          <blockquote>Great leaders build other leaders.</blockquote>
+          <p class="b-verse"><span>Mark 10:45</span> The Son of man came not to be ministered unto, but to minister.</p>
+        </div>
+      </article>
+      <article class="b-chapter" id="b-finance">
+        <span class="b-watermark" aria-hidden="true">Financial Expert</span>
+        <figure class="b-photo">
+          <button type="button" aria-label="View photo larger"><img src="images/beloved/finance.jpg" alt="Seated confidently in a black suit and white shirt" style="--pos:center 20%" loading="lazy" width="864" height="1080"></button>
+        </figure>
+        <div class="b-text">
+          <h3>Beloved as a <em>Financial Expert</em></h3>
+          <p class="b-tagline">Wisdom with money, purpose with wealth</p>
+          <p>As Executive Director of Asteric Asset Management, an SEC-approved institution, he helps steer strategy, investment management and the long-term growth of the organisation.</p>
+          <p>But for him, money is a tool and never the goal. He has endowed the Best Graduating Accounting Student Award at BOUESTI, sponsors first-class and indigent students, and partners with Helping Hands Foundation.</p>
+          <p>His book, More Than Gold, carries the same message: true wealth is the purpose it serves and the lives it lifts.</p>
+          <ul class="b-moments">
+            <li>Directs investment growth at Asteric Asset Management</li>
+            <li>Sponsors first-class and indigent students</li>
+            <li>Author of More Than Gold</li>
+          </ul>
+          <blockquote>Stewardship is the quiet work behind every big vision.</blockquote>
+          <p class="b-verse"><span>Proverbs 3:9</span> Honour the Lord with thy substance.</p>
+        </div>
+      </article>
+
+      <div class="b-beyond">
+        <div class="b-beyond-text">
+          <h3>Beyond the titles</h3>
+          <p>Away from the pulpit and the podium, he is warm, relaxed and easy to be around. The same man, in a lighter moment, with the same open door.</p>
+        </div>
+        <div class="b-beyond-grid">
+          <button type="button" aria-label="View photo larger"><img src="images/beloved/casual-1.jpg" alt="Relaxed portrait in a cream polo and navy trousers" loading="lazy" width="864" height="1080"></button>
+          <button type="button" aria-label="View photo larger"><img src="images/beloved/casual-2.jpg" alt="Smiling in a blue shirt and jeans" loading="lazy" width="864" height="1080"></button>
+        </div>
+      </div>
+
+      <div class="b-invite">
+        <p class="b-closing">One heart. Many roles. Deeply loved.</p>
+        <p class="b-invite-text">Whether you want to invite him to speak, mentor your team, or simply read the book, the door is open.</p>
+        <div class="b-invite-actions">
+          <a class="btn btn-primary" href="#contact">Invite him to speak</a>
+          <a class="btn btn-ghost" href="#book">Get &ldquo;More Than Gold&rdquo;</a>
+        </div>
+      </div>
+
+      <div class="b-lightbox" id="bLightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+        <button class="b-close" type="button" aria-label="Close">&times;</button>
+        <img alt="">
       </div>
     </section>
 

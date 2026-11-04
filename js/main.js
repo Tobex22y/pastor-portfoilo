@@ -383,3 +383,58 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// Beloved As: chapter reveal, role nav highlight, lightbox
+(function () {
+  const chapters = document.querySelectorAll('.b-chapter');
+  if (!chapters.length) return;
+  document.documentElement.classList.add('js');
+
+  if ('IntersectionObserver' in window) {
+    const reveal = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); reveal.unobserve(e.target); } });
+    }, { threshold: 0.2 });
+    chapters.forEach((c) => reveal.observe(c));
+
+    const links = [...document.querySelectorAll('.beloved-nav a')];
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) links.forEach((l) => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+      });
+    }, { rootMargin: '-40% 0px -50% 0px' });
+    chapters.forEach((c) => spy.observe(c));
+  } else {
+    chapters.forEach((c) => c.classList.add('in'));
+  }
+
+  const lb = document.getElementById('bLightbox');
+  const lbImg = lb.querySelector('img');
+  document.querySelectorAll('.b-photo button, .b-beyond-grid button').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const img = btn.querySelector('img');
+      lbImg.src = img.src; lbImg.alt = img.alt;
+      lb.classList.add('open');
+    });
+  });
+  const closeLb = () => lb.classList.remove('open');
+  lb.addEventListener('click', (e) => { if (e.target !== lbImg) closeLb(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLb(); });
+})();
+
+(function() {
+  const btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  const root = document.documentElement;
+  const icon = btn.querySelector('i');
+
+  function apply(theme) {
+    root.setAttribute('data-theme', theme);
+    icon.className = theme ==='dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+    btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+
+  apply(root.getAttribute('data-theme') || 'light');
+  btn.addEventListener('click', () => {
+    apply(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  });
+}) ();
