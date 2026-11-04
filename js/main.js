@@ -430,6 +430,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function apply(theme) {
     root.setAttribute('data-theme', theme);
     icon.className = theme ==='dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+    const label = btn.querySelector('.theme-label');
+    if (label) label.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
     btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
   }
 
